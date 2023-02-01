@@ -1,0 +1,49 @@
+{
+  "name": "@template-npm-org/template-name",
+  "version": "0.1.0",
+  "description": "template-description",
+  "type": "module",
+  "module": "out/lib/index.js",
+  "types": "out/types/lib/index.d.ts",
+  "scripts": {
+    "typegen": "tsc",
+    "typegen-watch": "tsc --watch",
+    "codegen": "node esbuild.cjs",
+    "codegen-watch": "node esbuild.cjs --watch",
+    "build": "run-s typegen codegen",
+    "watch": "run-p typegen-watch codegen-watch",
+    "lint": "node ts-standardx.mjs",
+    "lint-fix": "node ts-standardx.mjs --fix",
+    "run-tests": "node out/tests/index.js",
+    "test": "run-s lint run-tests",
+    "live-server": "node live-server.mjs",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/template-git-org/template-name.git"
+  },
+  "keywords": [
+    "misc",
+    "utils"
+  ],
+  "author": "jakobeha@fastmail.com",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/template-git-org/template-name/issues"
+  },
+  "homepage": "https://github.com/template-git-org/template-name#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/parser": "^4.0.0",
+    "builtin-modules": "^3.3.0",
+    "colorette": "^2.0.16",
+    "esbuild": "^0.14.9",
+    "eslint": "^5.0.0 || ^6.0.0 || ^7.0.0",
+    "husky": "^7.0.4",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "ts-standard": "^11.0.0",
+    "typescript": "^4.5.4"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "include": [
+    "lib/**/*.ts",
+    "tests/**/*.ts",
+    "bin/**/*.ts"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node",
+    "module": "es2020",
+    "target": "ES2021",
+    "baseUrl": "./",
+    "rootDir": "./",
+    "paths": {
+      "*": ["./lib/*", "./tests/*", "./bin/*"],
+      "lib": ["./lib"],
+    },
+    "skipLibCheck": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "./out/types",
+    "composite": true,
+    "isolatedModules": true
+  }
+}
